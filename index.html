@@ -36,8 +36,14 @@
             </form>
           </div>
 
-    <script src="script.js">
+    <script>
+        var app = angular.module("myApp",[]);
 
+            app.directive("welcomeMessage", function() {
+                return{
+                    template : "<h1>Registration</h1>"
+                }
+            });
     </script>
 
     </body>
