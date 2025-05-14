@@ -8,7 +8,7 @@ app.directive("welcomeMessage", function() {
 
 app.controller("username", function($scope){
     $scope.showMe= false;
-$scope.myFunc = function($scope){
-    $scope.showMe= true;
+$scope.myFunc = function(){
+    $scope.showMe= !$scope.showMe;
 }
 });
