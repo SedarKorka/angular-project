@@ -10,6 +10,9 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
 
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
     </head>
 
     <body ng-app="myApp">
@@ -36,14 +39,8 @@
             </form>
           </div>
 
-    <script>
-        var app = angular.module("myApp",[]);
+    <script src="script.js">
 
-            app.directive("welcomeMessage", function() {
-                return{
-                    template : "<h1>Registration</h1>"
-                }
-            });
     </script>
 
     </body>
