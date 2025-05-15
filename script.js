@@ -6,9 +6,13 @@ app.directive("welcomeMessage", function() {
     }
 });
 
-app.controller("username", function($scope){
-    $scope.showMe= false;
-$scope.myFunc = function(){
-    $scope.showMe= !$scope.showMe;
-}
+app.controller("choseRegisterOrLogin", function($scope){
+    $scope.name = false;
+    $scope.funcToAddNameForRegisterForm = function(){
+        $scope.name = true;
+    }
+
+    $scope.funcToRemveNameForLoginForm = function(){
+        $scope.name = false;
+    }
 });

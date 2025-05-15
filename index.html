@@ -15,22 +15,25 @@
 
     </head>
 
-    <body ng-app="myApp">
+    <body ng-app="myApp" ng-controller="choseRegisterOrLogin">
         <div class="main-block">
             <welcome-message></welcome-message>
             <form action="/">
               <hr>
               <div class="account-type">
-                <input type="radio" value="none" id="radioOne" name="account" checked/>
-                <label for="radioOne" class="radio">Login</label>
-                <input type="radio" value="none" id="radioTwo" name="account" />
-                <label ng-click="myFunc()" for="radioTwo" class="radio">Register</label>
+                <input type="radio" ng-click="funcToRemveNameForLoginForm()" value="none" id="radioOne" name="account" checked/>
+                <label for="radioOne" ng-click="funcToRemveNameForLoginForm()" class="radio">Login</label>
+                <input type="radio" ng-click="funcToAddNameForRegisterForm()" value="none" id="radioTwo" name="account" />
+                <label  for="radioTwo" ng-click="funcToAddNameForRegisterForm()" class="radio">Register</label>
               </div>
               <hr>
-              <label id="icon" for="name"><i class="fas fa-envelope"></i></label>
-              <input type="text" name="name" id="name" placeholder="Email" required/>
-              <label id="icon" for="name"><i class="fas fa-user"></i></label>
-              <input type="text" ng-show="username" name="name" id="name" placeholder="Name" required/>
+
+              <label id="icon" ng-show="name" for="name"><i class="fas fa-envelope"></i></label>
+              <input type="text" ng-show="name" name="name" id="name" placeholder="Email" required/>
+
+              <label id="icon"  for="name"><i class="fas fa-user"></i></label>
+              <input type="text"  name="name" id="name" placeholder="Name" required/>
+
               <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
               <input type="password" name="name" id="name" placeholder="Password" required/>
               <div class="btn-block">
